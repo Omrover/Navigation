@@ -1,0 +1,10 @@
+# Detector del dock dummy (AprilTag 36h11 con OpenCV, sin apriltag_ros).
+dock_detector:
+  ros__parameters:
+    image_topic: /camera/color/image_raw
+    camera_info_topic: /camera/color/camera_info
+    tag_family: 36h11
+    tag_id: 0
+    tag_size: 0.10            # lado del cuadro negro exterior (m)
+    output_frame: odom        # detected_dock_pose se publica en este frame, en 2D
+    max_rate_hz: 5.0          # docking_server pide la pose a ~1 Hz; ahorra CPU
