@@ -32,9 +32,10 @@ from tf2_ros import Buffer, TransformException, TransformListener
 
 from amr_interfaces.srv import ArmCommand
 
-# Postura dock_view (rad): cámara horizontal a 0.38 m, todo el brazo detrás de
-# x = 0.21 m (no choca con el panel del dock). Ver amr_navigation/README.md.
-DOCK_VIEW = [0.0, 1.25, 0.1, 1.7]
+# Postura dock_view (rad): cámara al frente con pitch -5° a 0.48 m, todo el brazo
+# detrás de x = 0.20 m (no choca con el panel del dock). Igual que arm_server.yaml
+# y el SRDF de amr_arm_moveit_config. Ver Navigation/README.md.
+DOCK_VIEW = [0.0, 1.46, 0.02, 1.57]
 WAYPOINTS = [  # (nombre, x, y, yaw) en el frame map = mundo de warehouse.sdf
     ('pick', 3.9, 1.8, 0.0),
     ('place', 3.9, -1.8, 0.0),

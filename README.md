@@ -41,9 +41,11 @@ piden los tres a la vez, el firmware escala la consigna y conserva la dirección
 - **Panel:** 0.6 m de alto, con un AprilTag 36h11 id 0 de 10 cm (14 cm con el
   margen blanco) centrado a 0.38 m. La imagen para imprimir está en
   `AMR_master/amr_gazebo/models/omr_dock/materials/textures/tag36h11_0.png`.
-- **Postura `dock_view` del brazo:** q = [0, 1.25, 0.1, 1.7] rad. La cámara queda
-  horizontal, mirando al frente a 0.38 m de altura, y todo el brazo queda detrás de
-  x = 0.21 m, así que no choca con el panel.
+- **Postura `dock_view` del brazo:** q = [0, 1.46, 0.02, 1.57] rad. La cámara mira
+  al frente con pitch -5°, a 0.48 m del suelo según la URDF (FK de `camera_link`), y
+  todo el brazo queda detrás de x = 0.20 m, así que no choca con el panel. Sustituye
+  a [0, 1.25, 0.1, 1.7], que con el eslabón 3 modelado como la L real (l3 + l4)
+  pone el eslabón 4 sobre el 2; MoveIt la rechaza por autocolisión.
 - **Pose de acople:** 0.28 m antes de la cara del panel. El frente del robot queda
   a unos 4 cm. El staging está a 0.7 m.
 - En `nav2_params.yaml`, `home_dock` usa la pose del mundo de simulación. En el
