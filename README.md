@@ -43,7 +43,7 @@ piden los tres a la vez, el firmware escala la consigna y conserva la dirección
   `AMR_master/amr_gazebo/models/omr_dock/materials/textures/tag36h11_0.png`.
 - **Postura `dock_view` del brazo:** q = [π, -0.05, -0.15, 0.35] rad (URDF del CAD,
   2026-11-26). El eslabón 2 queda en su tope, el codo abierto 0.15 rad y la cámara mira
-  al frente con pitch -5° a 0.50 m del suelo (FK de `camera_link`); todo el brazo queda
+  al frente con pitch -5° a 0.44 m del suelo (FK de `camera_link`); todo el brazo queda
   detrás de x = 0.20 m, así que no choca con el panel. Sin autocolisión con las mallas
   del CAD (margen ±0.03 rad). La de la geometría provisional ([0, 1.46, 0.02, 1.57])
   pone el eslabón 4 y la cámara sobre el 2 con las mallas reales.

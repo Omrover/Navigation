@@ -3,7 +3,7 @@
     ros2 run amr_navigation nav_mission_check [--ros-args -p use_sim_time:=true]
 
 1. Espera Nav2 activo, la odometría y el TF map->base_footprint.
-2. Lleva el brazo a la postura dock_view (la cámara mira al frente a 0.50 m).
+2. Lleva el brazo a la postura dock_view (la cámara mira al frente a 0.44 m).
 3. Navega por los waypoints (mesa de pick, mesa de place, centro) esquivando los
    obstáculos del mundo.
 4. Acopla en home_dock (staging + aproximación con el AprilTag) y desacopla.
@@ -32,7 +32,7 @@ from tf2_ros import Buffer, TransformException, TransformListener
 
 from amr_interfaces.srv import ArmCommand
 
-# Postura dock_view (rad): cámara al frente con pitch -5° a 0.50 m, todo el brazo
+# Postura dock_view (rad): cámara al frente con pitch -5° a 0.44 m, todo el brazo
 # detrás de x = 0.20 m (no choca con el panel del dock). Igual que arm_server.yaml
 # y el SRDF de amr_arm_moveit_config. Ver Navigation/README.md.
 DOCK_VIEW = [3.14159, -0.05, -0.15, 0.35]
