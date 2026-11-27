@@ -41,7 +41,7 @@ piden los tres a la vez, el firmware escala la consigna y conserva la dirección
 - **Panel:** 0.6 m de alto, con un AprilTag 36h11 id 0 de 10 cm (14 cm con el
   margen blanco) centrado a 0.38 m. La imagen para imprimir está en
   `AMR_master/amr_gazebo/models/omr_dock/materials/textures/tag36h11_0.png`.
-- **Postura `dock_view` del brazo:** q = [π, -0.02, 0.02, 0] rad (2026-11-27): la forma
+- **Postura `dock_view` del brazo:** q = [π, 0.056, 0.087, 0.0]  rad (2026-11-27): la forma
   de `rest` despegada. El eslabón 2 queda apenas arriba de su tope, el codo a ~90° y el
   gripper colineal con l4 (q4 = 0) y horizontal; `camera_link` queda a 0.415 m del suelo
   y x = 0.08 m (FK). Todo el brazo queda sobre el chasis, así que no choca con el panel.
